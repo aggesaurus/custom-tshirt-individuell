@@ -1,0 +1,37 @@
+[
+    {
+        "quantity": 5,
+        "ok_to_share": 1,
+        "text": "free hong kong",
+        "image": "flag.jpg",
+        "material": "cotton"
+    },
+    {
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "I am boss",
+        "image": 0,
+        "material": "linen"
+    },
+    {
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "#1 dad",
+        "image": "cup.jpg",
+        "material": "cotton"
+      },
+      {
+        "quantity": 3,
+        "ok_to_share": 1,
+        "text": "casual friday",
+        "image": "bears.jpg",
+        "material": "cotton"
+      },
+      {
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "heavy metal",
+        "image": "guitar.jpg",
+        "material": "cotton"
+      }
+]
