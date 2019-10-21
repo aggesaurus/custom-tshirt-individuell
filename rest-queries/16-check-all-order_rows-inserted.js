@@ -9,15 +9,15 @@ module.exports = ({ assert, response, store }) => ({
     // check that all users where
     // inserted correctly with correct data
     // try{
-    for (let i = 0; i < response.length; i++){
-      let a;
-      try {
-        a = assert.deepEqual(response[i], store.mockOrderRows[i])
-      }
-      catch(e){ console.log("NOT EQUAL", e)}
-      console.log("response", response[i]);
-      console.log("mockOrderRows", store.mockOrderRows[i]);
-    }
+    // for (let i = 0; i < response.length; i++){
+    //   let a;
+    //   try {
+    //     a = assert.deepEqual(response[i], store.mockOrderRows[i])
+    //   }
+    //   catch(e){ console.log("NOT EQUAL", e)}
+    //   console.log("response", response[i]);
+    //   console.log("mockOrderRows", store.mockOrderRows[i]);
+    // }
     assert.deepEqual(response, store.mockOrderRows);
   // }catch(e){
   //   console.log(e);

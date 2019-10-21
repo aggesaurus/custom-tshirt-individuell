@@ -15,7 +15,7 @@
     },
     {
         "quantity": 1,
-        "ok_to_share": 1,
+        "ok_to_share": 0,
         "text": "#1 dad",
         "image": "cup.jpg",
         "material": "cotton"
