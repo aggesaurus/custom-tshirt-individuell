@@ -1,0 +1,921 @@
+[
+  {
+    "name": "01-delete-all-users",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "delete"
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 5,
+      "insertId": 0,
+      "serverStatus": 34,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "expect(response.warningCount).to.equal(0)"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "02-check-no-users",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "get"
+    },
+    "response": [],
+    "tests": [
+      "assert.deepEqual(response, [])"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "03-create-users",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "post",
+      "body": {
+        "firstName": "Jyoti",
+        "lastName": "Ollarenshaw",
+        "email": "jollarenshaw0@wikia.com",
+        "password": "EyepxpnYjV",
+        "id": 1293
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1293,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1)"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "03-create-users",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "post",
+      "body": {
+        "firstName": "Chaunce",
+        "lastName": "Vatini",
+        "email": "cvatini1@studiopress.com",
+        "password": "iSNbZV",
+        "id": 1294
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1294,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1)"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "03-create-users",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "post",
+      "body": {
+        "firstName": "Maurine",
+        "lastName": "Gerardet",
+        "email": "mgerardet2@boston.com",
+        "password": "g9m0Yf",
+        "id": 1295
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1295,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1)"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "03-create-users",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "post",
+      "body": {
+        "firstName": "Harri",
+        "lastName": "Denniss",
+        "email": "hdenniss3@twitpic.com",
+        "password": "HJY8wAnQ9",
+        "id": 1296
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1296,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1)"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "03-create-users",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "post",
+      "body": {
+        "firstName": "Nolie",
+        "lastName": "Fabbri",
+        "email": "nfabbri4@noaa.gov",
+        "password": "y9Sjfx",
+        "id": 1297
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1297,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1)"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "04-check-all-users-inserted",
+    "request": {
+      "uri": "http://localhost:3000/rest/users",
+      "method": "get"
+    },
+    "response": [
+      {
+        "id": 1293,
+        "firstName": "Jyoti",
+        "lastName": "Ollarenshaw",
+        "email": "jollarenshaw0@wikia.com",
+        "password": "EyepxpnYjV"
+      },
+      {
+        "id": 1294,
+        "firstName": "Chaunce",
+        "lastName": "Vatini",
+        "email": "cvatini1@studiopress.com",
+        "password": "iSNbZV"
+      },
+      {
+        "id": 1295,
+        "firstName": "Maurine",
+        "lastName": "Gerardet",
+        "email": "mgerardet2@boston.com",
+        "password": "g9m0Yf"
+      },
+      {
+        "id": 1296,
+        "firstName": "Harri",
+        "lastName": "Denniss",
+        "email": "hdenniss3@twitpic.com",
+        "password": "HJY8wAnQ9"
+      },
+      {
+        "id": 1297,
+        "firstName": "Nolie",
+        "lastName": "Fabbri",
+        "email": "nfabbri4@noaa.gov",
+        "password": "y9Sjfx"
+      }
+    ],
+    "tests": [
+      "assert.equal(response.length, store.mockUsers.length)",
+      "assert.deepEqual(response, store.mockUsers)"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "05-delete-all-orders",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "delete"
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 5,
+      "insertId": 0,
+      "serverStatus": 34,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "expect(response.warningCount).to.equal(0);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "06-check-no-orders",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "get"
+    },
+    "response": [],
+    "tests": [
+      "assert.deepEqual(response, []);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "07-create-orders",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "post",
+      "body": {
+        "packed": 1,
+        "sent": 1,
+        "delivered": 0,
+        "userid": 1293,
+        "orderid": 1284
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1284,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "07-create-orders",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "post",
+      "body": {
+        "packed": 1,
+        "sent": 1,
+        "delivered": 0,
+        "userid": 1294,
+        "orderid": 1285
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1285,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "07-create-orders",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "post",
+      "body": {
+        "packed": 1,
+        "sent": 1,
+        "delivered": 0,
+        "userid": 1295,
+        "orderid": 1286
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1286,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "07-create-orders",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "post",
+      "body": {
+        "packed": 1,
+        "sent": 1,
+        "delivered": 1,
+        "userid": 1296,
+        "orderid": 1287
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1287,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "07-create-orders",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "post",
+      "body": {
+        "packed": 1,
+        "sent": 0,
+        "delivered": 0,
+        "userid": 1297,
+        "orderid": 1288
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 1288,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "08-check-all-orders-inserted",
+    "request": {
+      "uri": "http://localhost:3000/rest/orders",
+      "method": "get"
+    },
+    "response": [
+      {
+        "orderid": 1284,
+        "userid": 1293,
+        "packed": 1,
+        "sent": 1,
+        "delivered": 0
+      },
+      {
+        "orderid": 1285,
+        "userid": 1294,
+        "packed": 1,
+        "sent": 1,
+        "delivered": 0
+      },
+      {
+        "orderid": 1286,
+        "userid": 1295,
+        "packed": 1,
+        "sent": 1,
+        "delivered": 0
+      },
+      {
+        "orderid": 1287,
+        "userid": 1296,
+        "packed": 1,
+        "sent": 1,
+        "delivered": 1
+      },
+      {
+        "orderid": 1288,
+        "userid": 1297,
+        "packed": 1,
+        "sent": 0,
+        "delivered": 0
+      }
+    ],
+    "tests": [
+      "assert.equal(response.length, store.mockOrders.length);",
+      "assert.deepEqual(response, store.mockOrders);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "09-delete-all-products",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "delete"
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 5,
+      "insertId": 0,
+      "serverStatus": 34,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "expect(response.warningCount).to.equal(0);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "10-check-no-products",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "get"
+    },
+    "response": [],
+    "tests": [
+      "assert.deepEqual(response, []);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "11-create-products",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "post",
+      "body": {
+        "name": "adidas",
+        "description": "hoodie",
+        "price": 199,
+        "vat_percent": 20,
+        "orderid": 1284,
+        "productid": 172
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 172,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "11-create-products",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "post",
+      "body": {
+        "name": "nike",
+        "description": "tshirt",
+        "price": 159,
+        "vat_percent": 20,
+        "orderid": 1285,
+        "productid": 173
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 173,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "11-create-products",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "post",
+      "body": {
+        "name": "levis",
+        "description": "tshirt",
+        "price": 239,
+        "vat_percent": 20,
+        "orderid": 1286,
+        "productid": 174
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 174,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "11-create-products",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "post",
+      "body": {
+        "name": "puma",
+        "description": "tshirt",
+        "price": 199,
+        "vat_percent": 20,
+        "orderid": 1287,
+        "productid": 175
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 175,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "11-create-products",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "post",
+      "body": {
+        "name": "gant",
+        "description": "hoodie",
+        "price": 499,
+        "vat_percent": 20,
+        "orderid": 1288,
+        "productid": 176
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 176,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "12-check-all-products-inserted",
+    "request": {
+      "uri": "http://localhost:3000/rest/products",
+      "method": "get"
+    },
+    "response": [
+      {
+        "productid": 172,
+        "orderid": 1284,
+        "name": "adidas",
+        "description": "hoodie",
+        "price": 199,
+        "vat_percent": 20
+      },
+      {
+        "productid": 173,
+        "orderid": 1285,
+        "name": "nike",
+        "description": "tshirt",
+        "price": 159,
+        "vat_percent": 20
+      },
+      {
+        "productid": 174,
+        "orderid": 1286,
+        "name": "levis",
+        "description": "tshirt",
+        "price": 239,
+        "vat_percent": 20
+      },
+      {
+        "productid": 175,
+        "orderid": 1287,
+        "name": "puma",
+        "description": "tshirt",
+        "price": 199,
+        "vat_percent": 20
+      },
+      {
+        "productid": 176,
+        "orderid": 1288,
+        "name": "gant",
+        "description": "hoodie",
+        "price": 499,
+        "vat_percent": 20
+      }
+    ],
+    "tests": [
+      "assert.equal(response.length, store.mockProducts.length);",
+      "assert.deepEqual(response, store.mockProducts);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "13-delete-all-order_rows",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "delete"
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 5,
+      "insertId": 0,
+      "serverStatus": 34,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "expect(response.warningCount).to.equal(0);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "14-check-no-order_rows",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "get"
+    },
+    "response": [],
+    "tests": [
+      "assert.deepEqual(response, []);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "15-create-order_rows",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "post",
+      "body": {
+        "quantity": 5,
+        "ok_to_share": 1,
+        "text": "free hong kong",
+        "image": "flag.jpg",
+        "material": "cotton",
+        "orderid": 1284,
+        "productid": 172
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 0,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "15-create-order_rows",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "post",
+      "body": {
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "I am boss",
+        "image": 0,
+        "material": "linen",
+        "orderid": 1285,
+        "productid": 173
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 0,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "15-create-order_rows",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "post",
+      "body": {
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "#1 dad",
+        "image": "cup.jpg",
+        "material": "cotton",
+        "orderid": 1286,
+        "productid": 174
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 0,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "15-create-order_rows",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "post",
+      "body": {
+        "quantity": 3,
+        "ok_to_share": 1,
+        "text": "casual friday",
+        "image": "bears.jpg",
+        "material": "cotton",
+        "orderid": 1287,
+        "productid": 175
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 0,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "15-create-order_rows",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "post",
+      "body": {
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "heavy metal",
+        "image": "guitar.jpg",
+        "material": "cotton",
+        "orderid": 1288,
+        "productid": 176
+      }
+    },
+    "response": {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 0,
+      "serverStatus": 2,
+      "warningCount": 0,
+      "message": "",
+      "protocol41": true,
+      "changedRows": 0
+    },
+    "tests": [
+      "response.affectedRows.should.equal(1);"
+    ],
+    "status": "passed"
+  },
+  {
+    "name": "16-check-all-order_rows-inserted",
+    "request": {
+      "uri": "http://localhost:3000/rest/order_rows",
+      "method": "get"
+    },
+    "response": [
+      {
+        "orderid": 1284,
+        "productid": 172,
+        "quantity": 5,
+        "ok_to_share": 1,
+        "text": "free hong kong",
+        "image": "flag.jpg",
+        "material": "cotton"
+      },
+      {
+        "orderid": 1285,
+        "productid": 173,
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "I am boss",
+        "image": "0",
+        "material": "linen"
+      },
+      {
+        "orderid": 1286,
+        "productid": 174,
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "#1 dad",
+        "image": "cup.jpg",
+        "material": "cotton"
+      },
+      {
+        "orderid": 1287,
+        "productid": 175,
+        "quantity": 3,
+        "ok_to_share": 1,
+        "text": "casual friday",
+        "image": "bears.jpg",
+        "material": "cotton"
+      },
+      {
+        "orderid": 1288,
+        "productid": 176,
+        "quantity": 1,
+        "ok_to_share": 1,
+        "text": "heavy metal",
+        "image": "guitar.jpg",
+        "material": "cotton"
+      }
+    ],
+    "tests": [
+      "assert.equal(response.length, store.mockOrderRows.length);",
+      "*assert.deepEqual(response, store.mockOrderRows)"
+    ],
+    "status": "failed",
+    "error": "AssertionError: expected [ Array(5) ] to deeply equal [ Array(5) ]"
+  }
+]
