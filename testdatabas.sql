@@ -24,16 +24,16 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `sent` tinyint(4) DEFAULT '0',
   `delivered` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`orderid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1374 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1399 DEFAULT CHARSET=latin1;
 
 -- Dumpar data för tabell testdatabas.orders: ~5 rows (ungefär)
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
 INSERT INTO `orders` (`orderid`, `userid`, `packed`, `sent`, `delivered`) VALUES
-	(1369, 1378, 1, 1, 0),
-	(1370, 1379, 1, 1, 0),
-	(1371, 1380, 1, 1, 0),
-	(1372, 1381, 1, 1, 1),
-	(1373, 1382, 1, 0, 0);
+	(1394, 1403, 1, 1, 0),
+	(1395, 1404, 1, 1, 0),
+	(1396, 1405, 1, 1, 0),
+	(1397, 1406, 1, 1, 1),
+	(1398, 1407, 1, 0, 0);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 
 -- Dumping structure for tabell testdatabas.order_rows
@@ -51,11 +51,11 @@ CREATE TABLE IF NOT EXISTS `order_rows` (
 -- Dumpar data för tabell testdatabas.order_rows: ~5 rows (ungefär)
 /*!40000 ALTER TABLE `order_rows` DISABLE KEYS */;
 INSERT INTO `order_rows` (`orderid`, `productid`, `quantity`, `ok_to_share`, `text`, `image`, `material`) VALUES
-	(1369, 257, 5, 1, 'free hong kong', 'flag.jpg', 'cotton'),
-	(1370, 258, 1, 1, 'I am boss', '0', 'linen'),
-	(1371, 259, 1, 0, '#1 dad', 'cup.jpg', 'cotton'),
-	(1372, 260, 3, 1, 'casual friday', 'bears.jpg', 'cotton'),
-	(1373, 261, 1, 1, 'heavy metal', 'guitar.jpg', 'cotton');
+	(1394, 282, 5, 1, 'free hong kong', 'flag.jpg', 'cotton'),
+	(1395, 283, 1, 1, 'I am boss', '0', 'linen'),
+	(1396, 284, 1, 0, '#1 dad', 'cup.jpg', 'cotton'),
+	(1397, 285, 3, 1, 'casual friday', 'bears.jpg', 'cotton'),
+	(1398, 286, 1, 1, 'heavy metal', 'guitar.jpg', 'cotton');
 /*!40000 ALTER TABLE `order_rows` ENABLE KEYS */;
 
 -- Dumping structure for tabell testdatabas.products
@@ -67,16 +67,16 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price` int(11) DEFAULT NULL,
   `vat_percent` int(11) DEFAULT NULL,
   PRIMARY KEY (`productid`)
-) ENGINE=InnoDB AUTO_INCREMENT=262 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=287 DEFAULT CHARSET=latin1;
 
 -- Dumpar data för tabell testdatabas.products: ~5 rows (ungefär)
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`productid`, `orderid`, `name`, `description`, `price`, `vat_percent`) VALUES
-	(257, 1369, 'adidas', 'hoodie', 199, 20),
-	(258, 1370, 'nike', 'tshirt', 159, 20),
-	(259, 1371, 'levis', 'tshirt', 239, 20),
-	(260, 1372, 'puma', 'tshirt', 199, 20),
-	(261, 1373, 'gant', 'hoodie', 499, 20);
+	(282, 1394, 'adidas', 'hoodie', 199, 20),
+	(283, 1395, 'nike', 'tshirt', 159, 20),
+	(284, 1396, 'levis', 'tshirt', 239, 20),
+	(285, 1397, 'puma', 'tshirt', 199, 20),
+	(286, 1398, 'gant', 'hoodie', 499, 20);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
 -- Dumping structure for view testdatabas.sharedtshirtdata
@@ -94,16 +94,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(50) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1383 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1408 DEFAULT CHARSET=utf8;
 
 -- Dumpar data för tabell testdatabas.users: ~5 rows (ungefär)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`) VALUES
-	(1378, 'Jyoti', 'Ollarenshaw', 'jollarenshaw0@wikia.com', 'EyepxpnYjV'),
-	(1379, 'Chaunce', 'Vatini', 'cvatini1@studiopress.com', 'iSNbZV'),
-	(1380, 'Maurine', 'Gerardet', 'mgerardet2@boston.com', 'g9m0Yf'),
-	(1381, 'Harri', 'Denniss', 'hdenniss3@twitpic.com', 'HJY8wAnQ9'),
-	(1382, 'Nolie', 'Fabbri', 'nfabbri4@noaa.gov', 'y9Sjfx');
+	(1403, 'Jyoti', 'Ollarenshaw', 'jollarenshaw0@wikia.com', 'EyepxpnYjV'),
+	(1404, 'Chaunce', 'Vatini', 'cvatini1@studiopress.com', 'iSNbZV'),
+	(1405, 'Maurine', 'Gerardet', 'mgerardet2@boston.com', 'g9m0Yf'),
+	(1406, 'Harri', 'Denniss', 'hdenniss3@twitpic.com', 'HJY8wAnQ9'),
+	(1407, 'Nolie', 'Fabbri', 'nfabbri4@noaa.gov', 'y9Sjfx');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for view testdatabas.sharedtshirtdata
